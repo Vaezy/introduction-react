@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px;
+}
+
+img {
+  width: 75px;
+}
+
+ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+li {
+  border: 2px solid rgb(196, 190, 190);
+  border-radius: 5px;
+  padding: 6px 12px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
