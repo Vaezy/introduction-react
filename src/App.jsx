@@ -11,7 +11,7 @@ function App() {
         <Dish
           name="Tacos à l'unité"
           description="Savourez l'authenticité mexicaine avec notre délicieux tacos à l'unité. Garni de viande grillée, de légumes frais et de sauce maison, chaque bouchée vous transporte directement au cœur du Mexique."
-          price="3€"
+          price={3}
           imgSrc="https://cdn.pixabay.com/photo/2016/08/23/08/53/tacos-1613795_960_720.jpg"
           stock={12}
         />

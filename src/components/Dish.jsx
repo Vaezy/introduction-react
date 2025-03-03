@@ -6,8 +6,6 @@ export const Dish = ({ name, price, description, stock, imgSrc }) => {
       <img src={imgSrc} alt={name} />
       <h1>{name}</h1>
       <p>{description}</p>
-      <p>Prix : {price}€</p>
-      <p>Stock : {stock}</p>
     </article>
   );
 };
