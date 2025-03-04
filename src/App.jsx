@@ -34,7 +34,7 @@ export const App = () => {
     },
   ];
 
-  const filteredDishes = dishes.filter((dish) => dish.stock);
+  const filteredDishes = dishes.filter((dish) => dish.stock > 0);
 
   return (
     <>
