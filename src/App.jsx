@@ -34,7 +34,7 @@ export const App = () => {
     },
   ];
 
-  const isInStock = dishes.filter((dish) => dish.stock);
+  const filteredDishes = dishes.filter((dish) => dish.stock);
 
   return (
     <>
@@ -42,7 +42,7 @@ export const App = () => {
       <main className="pt-5 pb-5">
         <Container>
           <Row>
-            {isInStock.map((dish) => (
+            {filteredDishes.map((dish) => (
               <Col key={dish.id} md={4}>
                 <Dish
                   name={dish.name}
