@@ -10,21 +10,21 @@ export const App = () => {
       <main className="pt-5 pb-5">
         <Container>
           <Row>
-            <Col md={3}>
+            <Col md={4}>
               <Dish
                 name="Tacos à l'unité"
                 price={3}
                 imgSrc="https://cdn.pixabay.com/photo/2016/08/23/08/53/tacos-1613795_960_720.jpg"
               />
             </Col>
-            <Col md={3}>
+            <Col md={4}>
               <Dish
                 name="Enchiladas"
                 price={12}
                 imgSrc="https://cdn.pixabay.com/photo/2014/01/14/22/13/mexican-245240_960_720.jpg"
               />
             </Col>
-            <Col md={3}>
+            <Col md={4}>
               <Dish
                 name="Mole poblano"
                 price={3}
