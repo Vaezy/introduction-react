@@ -9,7 +9,7 @@ export const App = () => {
       <Header />
       <main className="pt-5 pb-5">
         <Container>
-          <Row className="d-flex justify-content-center">
+          <Row>
             <Col md={3}>
               <Dish
                 name="Tacos à l'unité"
