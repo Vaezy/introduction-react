@@ -7,7 +7,7 @@ export const App = () => {
   return (
     <>
       <Header />
-      <main style={{ paddingTop: "50px", paddingBottom: "50px" }}>
+      <main className="pt-5 pb-5">
         <Container>
           <Row className="d-flex justify-content-center">
             <Col md={3}>
