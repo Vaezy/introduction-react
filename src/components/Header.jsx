@@ -1,24 +1,27 @@
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+
 function Header() {
   return (
     <header>
-      <img
-        src="https://cdn.pixabay.com/photo/2018/03/26/14/18/man-3262834_960_720.png"
-        alt="Logo App"
-      />
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Accueil</a>
-          </li>
-          <li>
-            <a href="">Bonjour</a>
-          </li>
-          <li>
-            <a href="">Bonsoir</a>
-          </li>
-        </ul>
-      </nav>
-      <a href="">Contact</a>
+      <Navbar className="bg-body-tertiary">
+        <Container>
+          <Navbar.Brand href="/">
+            <img
+              alt="Logo App"
+              src="https://cdn.pixabay.com/photo/2018/03/26/14/18/man-3262834_960_720.png"
+              width="50"
+              height="50"
+            />
+          </Navbar.Brand>
+          <Navbar.Collapse className="justify-content-end">
+            <Nav>
+              <Nav.Link href="/">Accueil</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </header>
   );
 }
