@@ -7,10 +7,8 @@ export const Dish = ({ name, price, imgSrc, isNew }) => {
     <Card>
       <Card.Img src={imgSrc} />
       <Card.Body>
-        {isNew ? (
+        {isNew === true && (
           <Badge bg="primary position-absolute top-0 end-0 m-2">Nouveau</Badge>
-        ) : (
-          ""
         )}
         <Card.Title>{name}</Card.Title>
         <Card.Text>Prix : {price}€</Card.Text>
