@@ -1,9 +1,9 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { Dish } from "./components/Dish";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
 
-function App() {
+export const App = () => {
   return (
     <>
       <Header />
@@ -43,6 +43,4 @@ function App() {
       <Footer />
     </>
   );
-}
-
-export default App;
+};

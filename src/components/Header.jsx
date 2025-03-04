@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-function Header() {
+export const Header = () => {
   return (
     <header>
       <Navbar className="bg-body-tertiary">
@@ -24,6 +24,4 @@ function Header() {
       </Navbar>
     </header>
   );
-}
-
-export default Header;
+};
