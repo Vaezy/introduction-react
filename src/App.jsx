@@ -13,7 +13,7 @@ export const App = () => {
     setShowNewOnly((prev) => !prev);
   };
   const addToCart = () => {
-    setCardCount(cardCount + 1);
+    setCardCount((prev) => prev + 1);
   };
   const dishes = [
     {
