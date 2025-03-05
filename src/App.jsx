@@ -6,14 +6,10 @@ import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 
 export const App = () => {
-  const [cardCount, setCardCount] = useState(0);
   const [showNewOnly, setShowNewOnly] = useState(false);
 
   const handleShowNewOnly = () => {
     setShowNewOnly((prev) => !prev);
-  };
-  const addToCart = () => {
-    setCardCount((prev) => prev + 1);
   };
   const dishes = [
     {
@@ -51,7 +47,7 @@ export const App = () => {
 
   return (
     <>
-      <Header cardCount={cardCount} />
+      <Header />
       <main className="pt-5 pb-5">
         <Container>
           <Button
@@ -69,7 +65,6 @@ export const App = () => {
                   price={dish.price}
                   imgSrc={dish.imgSrc}
                   isNew={dish.isNew}
-                  addToCart={addToCart}
                 />
               </Col>
             ))}

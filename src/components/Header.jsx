@@ -1,10 +1,14 @@
+import { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/images/logo.webp";
 import "../assets/styles/header.scss";
+import { CardContext } from "../context/CardContext";
 
-export const Header = ({ cardCount }) => {
+export const Header = () => {
+  const { cardCount } = useContext(CardContext);
+
   return (
     <header>
       <Navbar className="bg-body-tertiary">
