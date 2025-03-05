@@ -15,7 +15,13 @@ export const Dish = ({ name, price, imgSrc, isNew }) => {
         )}
         <Card.Title>{name}</Card.Title>
         <Card.Text>Prix : {price}€</Card.Text>
-        <Button variant="primary" className="w-100">
+        <Button
+          variant="primary"
+          className="w-100"
+          onClick={() =>
+            alert(`Le plat ${name} est maintenant dans votre panier.`)
+          }
+        >
           Ajouter au panier
         </Button>
       </Card.Body>
