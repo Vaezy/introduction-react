@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/images/logo.webp";
 import "../assets/styles/header.scss";
 
-export const Header = () => {
+export const Header = ({ cardCount }) => {
   return (
     <header>
       <Navbar className="bg-body-tertiary">
@@ -15,6 +15,7 @@ export const Header = () => {
           <Navbar.Collapse className="justify-content-end">
             <Nav>
               <Nav.Link href="/">Accueil</Nav.Link>
+              <Navbar.Text>Panier ({cardCount})</Navbar.Text>
             </Nav>
           </Navbar.Collapse>
         </Container>

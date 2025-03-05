@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "../assets/styles/dish.scss";
 
-export const Dish = ({ name, price, imgSrc, isNew }) => {
+export const Dish = ({ name, price, imgSrc, isNew, addToCart }) => {
   return (
     <Card>
       <Card.Img src={imgSrc} />
@@ -15,13 +15,7 @@ export const Dish = ({ name, price, imgSrc, isNew }) => {
         )}
         <Card.Title>{name}</Card.Title>
         <Card.Text>Prix : {price}€</Card.Text>
-        <Button
-          variant="primary"
-          className="w-100"
-          onClick={() =>
-            alert(`Le plat ${name} est maintenant dans votre panier.`)
-          }
-        >
+        <Button variant="primary" className="w-100" onClick={() => addToCart()}>
           Ajouter au panier
         </Button>
       </Card.Body>
