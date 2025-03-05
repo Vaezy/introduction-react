@@ -1,12 +1,19 @@
-import { useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { Dish } from "./components/Dish";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import { CartContext } from "./context/CartContext";
 
 export const App = () => {
+  const { cartCount } = useContext(CartContext);
+  const prevCartCountRef = useRef(cartCount);
   const [showNewOnly, setShowNewOnly] = useState(false);
+
+  useEffect(() => {
+    prevCartCountRef.current = cartCount;
+  }, [cartCount]);
 
   const handleShowNewOnly = () => {
     setShowNewOnly((prev) => !prev);
@@ -57,6 +64,10 @@ export const App = () => {
           >
             {showNewOnly ? "Voir tous les plats" : "Nouveautés uniquements"}
           </Button>
+          <p>
+            Le panier est passé de {prevCartCountRef.current} à {cartCount}{" "}
+            articles.
+          </p>
           <Row>
             {filteredDishes.map((dish) => (
               <Col key={dish.id} md={4}>

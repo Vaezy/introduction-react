@@ -28,15 +28,11 @@ export const Dish = ({ name, price, imgSrc, isNew }) => {
         <Card.Title>{name}</Card.Title>
         <Card.Text>Prix : {price}€</Card.Text>
         <div className="d-flex gap-4">
-          <Button
-            variant="secondary"
-            className="w-100"
-            onClick={handleAddToCart}
-          >
+          <Button variant="success" className="w-100" onClick={handleAddToCart}>
             Ajouter au panier
           </Button>
           <Button
-            variant="secondary"
+            variant="danger"
             className="w-100"
             onClick={handleRemoveFromCart}
           >
