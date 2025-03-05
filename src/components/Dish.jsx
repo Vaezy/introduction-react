@@ -6,7 +6,16 @@ import "../assets/styles/dish.scss";
 import { CartContext } from "../context/CartContext";
 
 export const Dish = ({ name, price, imgSrc, isNew }) => {
-  const { addToCart } = useContext(CartContext);
+  const { dispatch } = useContext(CartContext);
+
+  const handleAddToCart = () => {
+    dispatch({ type: "increment" });
+  };
+
+  const handleRemoveFromCart = () => {
+    dispatch({ type: "decrement" });
+  };
+
   return (
     <Card>
       <Card.Img src={imgSrc} />
@@ -18,9 +27,22 @@ export const Dish = ({ name, price, imgSrc, isNew }) => {
         )}
         <Card.Title>{name}</Card.Title>
         <Card.Text>Prix : {price}€</Card.Text>
-        <Button variant="primary" className="w-100" onClick={addToCart}>
-          Ajouter au panier
-        </Button>
+        <div className="d-flex gap-4">
+          <Button
+            variant="secondary"
+            className="w-100"
+            onClick={handleAddToCart}
+          >
+            Ajouter au panier
+          </Button>
+          <Button
+            variant="secondary"
+            className="w-100"
+            onClick={handleRemoveFromCart}
+          >
+            Retirer du panier
+          </Button>
+        </div>
       </Card.Body>
     </Card>
   );

@@ -1,16 +1,13 @@
-import { createContext, useState } from "react";
+import { createContext, useReducer } from "react";
+import { CartReducer, initialState } from "../reducers/CartReducer";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cartCount, setCartCount] = useState(0);
-
-  const addToCart = () => {
-    setCartCount((prev) => prev + 1);
-  };
+  const [state, dispatch] = useReducer(CartReducer, initialState);
 
   return (
-    <CartContext.Provider value={{ cartCount, addToCart }}>
+    <CartContext.Provider value={{ cartCount: state.cartCount, dispatch }}>
       {children}
     </CartContext.Provider>
   );
