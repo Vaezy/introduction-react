@@ -3,10 +3,10 @@ import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "../assets/styles/dish.scss";
-import { CardContext } from "../context/CardContext";
+import { CartContext } from "../context/CartContext";
 
 export const Dish = ({ name, price, imgSrc, isNew }) => {
-  const { addToCart } = useContext(CardContext);
+  const { addToCart } = useContext(CartContext);
   return (
     <Card>
       <Card.Img src={imgSrc} />

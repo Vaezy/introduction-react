@@ -4,10 +4,10 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/images/logo.webp";
 import "../assets/styles/header.scss";
-import { CardContext } from "../context/CardContext";
+import { CartContext } from "../context/CartContext";
 
 export const Header = () => {
-  const { cardCount } = useContext(CardContext);
+  const { cartCount } = useContext(CartContext);
 
   return (
     <header>
@@ -19,7 +19,7 @@ export const Header = () => {
           <Navbar.Collapse className="justify-content-end">
             <Nav>
               <Nav.Link href="/">Accueil</Nav.Link>
-              <Navbar.Text>Panier ({cardCount})</Navbar.Text>
+              <Navbar.Text>Panier ({cartCount})</Navbar.Text>
             </Nav>
           </Navbar.Collapse>
         </Container>
