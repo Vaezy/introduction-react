@@ -1,20 +1,11 @@
-import { useContext } from "react";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "../assets/styles/dish.scss";
-import { CartContext } from "../context/CartContext";
+import { useCart } from "../hooks/useCart";
 
 export const Dish = ({ name, price, imgSrc, isNew }) => {
-  const { dispatch } = useContext(CartContext);
-
-  const handleAddToCart = () => {
-    dispatch({ type: "increment" });
-  };
-
-  const handleRemoveFromCart = () => {
-    dispatch({ type: "decrement" });
-  };
+  const { addToCart, removeFromCart } = useCart();
 
   return (
     <Card>
@@ -28,14 +19,10 @@ export const Dish = ({ name, price, imgSrc, isNew }) => {
         <Card.Title>{name}</Card.Title>
         <Card.Text>Prix : {price}€</Card.Text>
         <div className="d-flex gap-4">
-          <Button variant="success" className="w-100" onClick={handleAddToCart}>
+          <Button variant="success" className="w-100" onClick={addToCart}>
             Ajouter au panier
           </Button>
-          <Button
-            variant="danger"
-            className="w-100"
-            onClick={handleRemoveFromCart}
-          >
+          <Button variant="danger" className="w-100" onClick={removeFromCart}>
             Retirer du panier
           </Button>
         </div>
